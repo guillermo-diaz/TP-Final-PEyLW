@@ -17,7 +17,7 @@
                 <label for="buscador" class="form-label">Buscador</label>
                 <i class="fas fa-search"></i>
             </div>
-            <a href="#" id="carrito">
+            <a  id="carrito">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
@@ -45,10 +45,24 @@
                 Categorias
             </div>
             <div id="seccion-productos" >
-                
-    
             </div>
         </div>
+        <dialog id="carrito-modal"> 
+            <div class="headerCarrito">
+
+                <h3>Carrito de Compras</h3>
+                <button id="vaciarCarrito">Vaciar Carrito</button>
+                <button id="salirCarrito">Volver</button>
+                
+            </div>
+
+            <div id="productos-carrito">
+
+            </div>
+            <div id="footer-carrito" class="footer-carrito">
+ 
+            </div>
+        </dialog>
     </section>
     <footer>
         <div class="footer-rows">
@@ -80,8 +94,9 @@
     
     
     </footer>
-
-    <script src="../app.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/app.js"></script>
 </body>
 
 </html>
