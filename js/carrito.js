@@ -37,18 +37,23 @@ function mostrarCarrito(){
         precioP.textContent = "$"+product.precioAcum;
 
         restar.addEventListener("click", () => {
-            let cantid = parseInt(cant.textContent)
+            let cantid = parseInt(cant.textContent);
             if (cantid > 1) {
               cant.textContent = cantid - 1;
-              precioP.textContent = "$" + product.precio * parseInt(cant.textContent);
+              product.cantidad = cantid - 1; // Actualizar la cantidad en el objeto product
+              product.precioAcum = product.precio * product.cantidad; // Actualizar el precio acumulado
+              precioP.textContent = "$" + product.precioAcum;
+              actualizarTotal(); // Recalcular la suma total
             }
-        });
+          });
       
         sumar.addEventListener("click", () => {
             cant.textContent = parseInt(cant.textContent) + 1;
-            precioP.textContent = "$" + product.precio * parseInt(cant.textContent);
+            product.cantidad = parseInt(cant.textContent); // Actualizar la cantidad en el objeto product
+            product.precioAcum = product.precio * product.cantidad; // Actualizar el precio acumulado
+            precioP.textContent = "$" + product.precioAcum;
+            actualizarTotal(); // Recalcular la suma total
           });
-       
         
         producto.append(counter);
         let eliminar = document.createElement("button");
@@ -64,7 +69,7 @@ function mostrarCarrito(){
 
     let footerCarrito = document.getElementById("footer-carrito");
     footerCarrito.innerHTML = "";
-    let suma = carrito.reduce((acc, p) => acc + p.precio, 0);
+    let suma = carrito.reduce((acc, p) => acc + p.precioAcum, 0);
 
     let totalPagar = document.createElement("div");
     totalPagar.className = "totalPagar-carrito";
@@ -90,6 +95,12 @@ abrirCarrito.addEventListener("click", () => {
 
 (document.getElementById("salirCarrito")).addEventListener("click", cerrarCarrito);
 
+(document.getElementById("vaciarCarrito")).addEventListener("click", () => {
+    carrito = []; // Vaciar el carrito asignando un array vacío
+    saveLocal(); // Guardar el carrito vacío en el almacenamiento local
+    mostrarCarrito(); // Actualizar la interfaz mostrando el carrito vacío
+});
+
 function cerrarCarrito(){
     modalCarrito.style.display = "none";
     modalCarrito.close();
@@ -104,11 +115,24 @@ const eliminarProducto = () => {
 
     saveLocal();
     mostrarCarrito();
+    actualizarContador();
 };
 
 
 function saveLocal() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
+
+function actualizarTotal() {
+    let suma = carrito.reduce((acc, p) => acc + p.precioAcum, 0);
+    let totalPagar = document.querySelector(".totalPagar-carrito h3");
+    totalPagar.textContent = `Total a pagar: $${suma}`;
+  }
+
+  function actualizarContador(){
+    let counter = document.getElementById("contador-productos");
+    counter.innerText = carrito.length;
+  }
+
 
 

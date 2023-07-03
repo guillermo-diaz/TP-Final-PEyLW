@@ -17,8 +17,9 @@
                 <label for="buscador" class="form-label">Buscador</label>
                 <i class="fas fa-search"></i>
             </div>
-            <a  id="carrito">
+            <a id="carrito">
                 <i class="fas fa-shopping-cart"></i>
+                <span id="contador-productos">0</span>
             </a>
         </div>
         <div id="barra_header">
@@ -42,7 +43,55 @@
         <div class="nav-productos">
 
             <div class="filtros-productos">
-                Categorias
+                <nav class="nav-filtros">
+                    <ul class="filtros-list">
+                        <li class="list-item">
+                            <div class="list-bottom ">
+                                <a  class="nav-link">Filtros</a>
+                            </div>
+                        </li>
+                        <li class="list-item list-buttom-click">
+                            <div class="list-buttom list-buttom-click genero-button">
+                                <a href="#" class="nav-link">Género</a>
+                                <img src="../assets/arrow.svg" class="list-arrow">
+                            </div>
+
+                            <ul class="list-show">
+                                <li class="list-inside">
+                                    <a href="#" class="nav-link nav-link-inside">Rap</a>
+                                </li>
+                                <li class="list-inside">
+                                    <a href="#" class="nav-link nav-link-inside">Grunge</a>
+                                </li>
+                                <li class="list-inside">
+                                    <a href="#" class="nav-link nav-link-inside">Heavy Metal</a>
+                                </li>
+                                <li class="list-inside">
+                                    <a href="#" class="nav-link nav-link-inside">Rock Alternativo</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+
+                        <li class="list-item list-buttom-click">
+                            <div class="list-buttom list-buttom-click price-button">
+                                <a href="#" class="nav-link">Precio</a>
+                                <img src="../assets/arrow.svg" class="list-arrow">
+                            </div>
+
+                            <ul class="list-show">
+                                <li class="list-inside">
+                                    <a href="#" class="nav-link nav-link-inside">Menor precio</a>
+                                </li>
+                                <li class="list-inside">
+                                    <a href="#" class="nav-link nav-link-inside">Mayor precio</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        
+                    </ul>
+                </nav>
             </div>
             <div id="seccion-productos" >
             </div>
@@ -94,6 +143,7 @@
     
     
     </footer>
+    <script src="../js/filtros.js"></script>
     <script src="../js/carrito.js"></script>
     <script src="../js/products.js"></script>
     <script src="../js/app.js"></script>

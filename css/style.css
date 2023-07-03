@@ -79,6 +79,27 @@ header {
     font-weight: 200;
   }
 
+  #carrito {
+    position: relative;
+  }
+  
+  #contador-productos {
+    position: absolute;
+    top: -6px;
+    right: -2px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
   #carrito:active {
     background-color: rgb(185, 185, 185);
 }
@@ -269,9 +290,14 @@ section {
   color: #FFFFFF;
   width: 100px;
   height: 30px;
-
-  
+  transition: background-color 0.3s ease-out;
 }
+
+.comprar:active {
+  background-color: rgb(23, 46, 110);
+}
+
+
 
 
 
@@ -320,7 +346,7 @@ section {
   margin: 20px 0;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   border-radius: 3px;
   box-shadow: 0.3px 2px 4px rgba(0, 0, 0, 0.2);
@@ -344,16 +370,13 @@ section {
   height: 100%;
 }
 
-.card-producto h3, p, span {
+.card-producto h3 {
   margin-left: 20px;
+  margin-right: auto;
 }
 
 .card-producto p, .card-producto span, .card-producto button{
-  margin-right: 20px;
-}
-
-.card-producto p, .card-producto span, .card-producto button {
-  margin-left: auto;
+  margin-right: 30px;
 }
 
 .totalPagar-carrito{
@@ -374,7 +397,78 @@ section {
   padding: 0;
 }
 
+/*filtros*/
+.filtros-productos {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  border-radius: 0 16px 16px 0; 
+}
 
+.nav-filtros {
+ width: 100%;
+ height: 100%;
+}
+
+.filtros-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 0 16px 16px 0;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.list-item {
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.list-item-click {
+  cursor: pointer;
+}
+
+.list-buttom{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.arrow .list-arrow{
+  transform: rotate(90deg);
+}
+
+.list-arrow {
+  margin-left: auto;
+  transition: transform .3s;
+}
+
+.nav-link {
+  color: #303440;
+  display: block;
+  padding: 15px 0;
+}
+
+.nav-link-inside:hover {
+  background: #dfe0e0;
+}
+
+.nav-link-inside {
+  border-radius: 6px;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.list-show {
+  width: 80%;
+  margin-left: auto;
+  border-left: 2px solid #303440;
+  transition: height .4s;
+  height: 0;
+}
 
 
 

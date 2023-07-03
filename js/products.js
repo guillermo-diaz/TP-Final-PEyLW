@@ -73,6 +73,7 @@ productos.forEach((product) => {
                 cantidad: 1,
                 precioAcum: product.precio
             });
+            actualizarContador();
         }
         saveLocal();
     });
