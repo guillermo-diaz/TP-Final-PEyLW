@@ -58,12 +58,12 @@ function mostrarCarrito(){
         producto.append(counter);
         let eliminar = document.createElement("button");
         eliminar.className = "fas fa-trash-alt borrarProducto";
+        eliminar.addEventListener("click", () =>{eliminarProducto(product.id)});
 
         producto.append(precioP);
         producto.append(eliminar);
         containerProductos.append(producto);
         
-        eliminar.addEventListener("click", eliminarProducto);
 
     });
 
@@ -99,6 +99,7 @@ abrirCarrito.addEventListener("click", () => {
     carrito = []; // Vaciar el carrito asignando un array vacío
     saveLocal(); // Guardar el carrito vacío en el almacenamiento local
     mostrarCarrito(); // Actualizar la interfaz mostrando el carrito vacío
+    actualizarContador();
 });
 
 function cerrarCarrito(){
@@ -106,11 +107,10 @@ function cerrarCarrito(){
     modalCarrito.close();
 }
 
-const eliminarProducto = () => {
-    const foundId = carrito.find((element) => element.id);
+function eliminarProducto(id) {
 
     carrito = carrito.filter((carritoId) => {
-        return carritoId !== foundId;
+        return carritoId.id !== id;
     })
 
     saveLocal();
