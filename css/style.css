@@ -269,13 +269,11 @@ section {
   color: #FFFFFF;
   width: 100px;
   height: 30px;
-  transition: .3s ease;
+
   
 }
 
-.comprar:hover{
-  margin-left: 3px;
-}
+
 
 
 /*categoria*/
@@ -346,11 +344,15 @@ section {
   height: 100%;
 }
 
-.card-producto h3, p {
+.card-producto h3, p, span {
   margin-left: 20px;
 }
 
-.card-producto button {
+.card-producto p, .card-producto span, .card-producto button{
+  margin-right: 20px;
+}
+
+.card-producto p, .card-producto span, .card-producto button {
   margin-left: auto;
 }
 
@@ -366,6 +368,10 @@ section {
 
 .botonPagar {
   margin-left: auto;
+}
+
+.contadorProductos button {
+  padding: 0;
 }
 
 

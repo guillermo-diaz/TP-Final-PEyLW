@@ -1,6 +1,7 @@
 const productos = [
     {
         id: 1,
+        tipo: "album",
         nombre: "Black Sabbath",
         artista: "Black Sabbath",
         info: "Black Sabbath es el álbum debut de la banda británica de heavy metal Black Sabbath. Fue publicado el 13 de febrero de 1970. Se considera el primer álbum en la historia del metal y punto de partida para la creación de dicho género musical. Llegó a los top ten británicos, donde permaneció por tres meses",
@@ -10,6 +11,7 @@ const productos = [
     },
     {
         id: 2,
+        tipo: "album",
         nombre: "Paranoid",
         artista: "Black Sabbath",
         info: "Paranoid es el segundo álbum de la banda británica de heavy metal Black Sabbath. Originariamente su nombre iba a ser War Pigs, pero debido a presiones de la discográfica se cambió el nombre a Paranoid. Fue grabado y publicado en el año 1970, constituyendo el primer éxito de la banda, y hasta nuestros días es considerado un disco de culto.",
@@ -19,6 +21,7 @@ const productos = [
     },
     {
         id: 3,
+        tipo: "album",
         nombre: "The Eminem Show",
         artista: "Eminem",
         info: "The Eminem Show es el cuarto álbum de estudio del cantante estadounidense Eminem, el tercero tras firmar por Aftermath, lanzado en 2002. Fue el álbum musical más vendido ese año en todo el mundo con 22 millones de copias, el primer sencillo, y el más exitoso, fue Without Me.",
@@ -56,12 +59,23 @@ productos.forEach((product) => {
 
 
     comprar.addEventListener("click", () => {
-        carrito.push({
-            id: product.id, 
-            img: product.img,
-            nombre: product.nombre, 
-            precio: product.precio
-        });
-    })
+        const foundProduct = carrito.find((element) => element.id === product.id);
+    
+        if (foundProduct) {
+            foundProduct.cantidad++;
+            foundProduct.precioAcum = foundProduct.precioAcum + product.precio;
+        } else {
+            carrito.push({
+                id: product.id, 
+                img: product.img,
+                nombre: product.nombre, 
+                precio: product.precio,
+                cantidad: 1,
+                precioAcum: product.precio
+            });
+        }
+        saveLocal();
+    });
+    
 
 });
