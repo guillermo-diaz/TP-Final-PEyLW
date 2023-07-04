@@ -70,3 +70,15 @@ section {
   #informacion-producto h2{
     font-size: 20px;
   }
+
+  .envios-pais {
+    color: rgb(20, 122, 20);
+  }
+  .envios-pais p{
+    margin-left: 5px;
+  }
+
+  .precio-product{
+    font-size: 20px;
+    color: rgb(0, 68, 255)
+  }

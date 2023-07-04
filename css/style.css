@@ -505,7 +505,9 @@ section {
 
 
 
-
+.card img:hover, .card h3:hover{
+  cursor: pointer;
+}
 
 
 
