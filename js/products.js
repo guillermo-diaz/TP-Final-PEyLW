@@ -265,7 +265,17 @@ function mostrarProductos(){
         comprar.textContent = "COMPRAR";
         let imagen = document.createElement("img");
         imagen.src = product.img;
-        imagen.alt = product.nombre;    
+        imagen.alt = product.nombre; 
+        
+        h3.addEventListener("click", () => {
+            window.location.href = "../html/detalleProducto.html?product=" + encodeURIComponent(JSON.stringify(product));
+          });
+          
+          imagen.addEventListener("click", () => {
+            window.location.href = "../html/detalleProducto.html?product=" + encodeURIComponent(JSON.stringify(product));
+          });
+          
+          
     
         divInfoProducto.append(h3);
         divInfoProducto.append(pPrice);
@@ -300,6 +310,8 @@ function mostrarProductos(){
     });
 
 }
+
+
 
 
 
