@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>Album</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="header_top">
+            <a id="icono" href="index.html">
+                <img src="../img/rhcp.png" >
+            </a>
+            <div class="container_barra">
+                <input type="text" id="buscador" class="buscador_input" placeholder=" ">
+                <label for="buscador" class="form-label">Buscador</label>
+                <i class="fas fa-search"></i>
+            </div>
+            <a id="carrito">
+                <i class="fas fa-shopping-cart"></i>
+                <span id="contador-productos">0</span>
+            </a>
+        </div>
+        <div id="barra_header">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="artistas.html" >ARTISTAS</a>
+                    </li>
+                    <li>
+                        <a href="album.html">ÁLBUM</a>
+                    </li>
+                    <li>
+                        <a href="productos.html" >PRODUCTOS</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <div class="container-form">
+
+            <form action="">
+        
+                <div class="row">
+        
+                    <div class="col">
+        
+                        <h3 class="title">Datos Personales</h3>
+        
+                        <div class="inputBox">
+                            <span>Nombre:</span>
+                            <input id="inputNombre" type="text" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Apellido:</span>
+                            <input id="inputApellido" type="text" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Email:</span>
+                            <input id="inputEmail" required type="email" placeholder="example@example.com">
+                        </div>
+                        <div class="inputBox">
+                            <span>Dirección:</span>
+                            <input id="inputDireccion" required type="text" placeholder="Calle - Localidad">
+                        </div>
+                        <div class="inputBox">
+                            <span>Ciudad:</span>
+                            <input id="inputCiudad" required type="text" placeholder="Neuquén">
+                        </div>
+                        
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Pais:</span>
+                                <input id="inputPais" required type="text" placeholder="Argentina">
+                            </div>
+                            <div class="inputBox">
+                                <span>Codigo Postal:</span>
+                                <input id="inputCP" required type="text" >
+                            </div>
+                        </div>
+
+                        <div class="inputBox">
+                            <span>Observaciones:</span>
+                            <textarea id="observaciones" name="observaciones" rows="4" cols="50"></textarea>
+                        </div>
+        
+                    </div>
+        
+                    <div class="col">
+        
+                        <h3 class="title">Método de Pago</h3>
+        
+                        <div class="inputBox">
+                            <span>Tarjetas Aceptadas:</span>
+                            <img src="../img/cards.png" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>Nombre Tarjeta:</span>
+                            <input id="inputNombreTarjeta" required type="text" placeholder="Visa - Mastercard - American Express">
+                        </div>
+                        <div class="inputBox">
+                            <span>Nombre en Tarjeta:</span>
+                            <input id="inputNombreEnTarjeta" required type="text" placeholder="Example: Guillermo Diaz">
+                        </div>
+                        <div class="inputBox">
+                            <span>Número de Tarjeta:</span>
+                            <input id="inputNroTarjeta" type="text" placeholder="1111-2222-3333-4444">
+                        </div>
+                        
+                        <div class="inputBox">
+                            <div class="inputBox">
+                                <span>CVV:</span>
+                                <input id="inputCVV" type="text" placeholder="123">
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Mes:</span>
+                                <input id="inputMes" type="number" placeholder="1-12">
+                            </div>
+                            <div class="inputBox">
+                                <span>Año:</span>
+                                <input id="inputAnio" type="number" >
+                            </div>
+                            
+                        </div>
+                        <div id="ver-precio-pagar">
+                            <div class="ver-precio-pagar">
+                                <p>Precio Total: </p>
+                                <span id="precio-pagar">$</span>
+                            </div>
+                        
+                        </div>
+                    </div>
+            
+                </div>
+        
+                <input id="submit-comprar" type="submit" value="Comprar" class="submit-btn">
+        
+            </form>
+        
+        </div>  
+        <dialog id="carrito-modal"> 
+            <div class="headerCarrito">
+
+                <h3>Carrito de Compras</h3>
+                <button id="vaciarCarrito">Vaciar Carrito</button>
+                <button id="salirCarrito">Volver</button>
+                
+            </div>
+
+            <div id="productos-carrito">
+
+            </div>
+            <div id="footer-carrito" class="footer-carrito">
+ 
+            </div>
+        </dialog>
+    </section>
+    <footer>
+        <div class="footer-rows">
+            
+            <div class="footer-links">
+                <h4>Ayuda</h4>
+                <ul>
+                    <li><a href="">Preguntas</a></li>
+                    <li><a href="">¿Quienés somos?</a></li>
+                    <li><a href="">Ponte en Contacto con nosotros</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Seguinos</h4>
+                <div class="social-links">
+                    <a id="yt" href="" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a id="spotify" href=""><i class="fab fa-spotify"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+
+
+                </div>
+
+    
+            </div>
+    
+        </div>
+    
+    
+    </footer>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/formulario.js"></script>
+</body>
+
+</html>

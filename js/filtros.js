@@ -1,5 +1,6 @@
 let listElements = document.querySelectorAll('.list-button-click');
 
+
 listElements.forEach(listElement => {
     listElement.addEventListener('click', ()=>{
         
@@ -79,7 +80,6 @@ const filtroPrecio = document.querySelectorAll('#precio-filtro .list-show .list-
 
 filtroPrecio.forEach((prec) => {
   let formato = (prec.querySelector('a')).textContent;
-  console.log(formato);
 
   if (formato === "Menor precio"){
     prec.addEventListener("click", () => {
@@ -109,7 +109,6 @@ const filtroAlfabeto = document.querySelectorAll('#alfabeto-filtro .list-show .l
 
 filtroAlfabeto.forEach((p) => {
   let formato = (p.querySelector('a')).textContent;
-  console.log(formato);
 
   if (formato === "a-z"){
     p.addEventListener("click", () => {

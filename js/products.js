@@ -247,7 +247,7 @@ const seccionProductos = document.getElementById("seccion-productos");
 let productosFiltro = productos.slice();
 
 
-mostrarProductos();
+
 
 function mostrarProductos(){
     productosFiltro.forEach((product) => {

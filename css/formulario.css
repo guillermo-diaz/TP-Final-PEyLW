@@ -1,0 +1,116 @@
+
+
+*{
+
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  outline: none; 
+  border:none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+
+.container-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+}
+
+.container-form form{
+  padding: 20px;
+  width: 800px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+}
+
+.container-form form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.container-form form .row .col{
+  flex: 1 1 250px;
+}
+
+.container-form form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container-form form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.container-form form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.container-form form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.container-form form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.container-form form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.container-form form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.container-form form .row .col .inputBox img{
+    padding: 0;
+    height: 32px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container-form form .submit-btn{
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #1a3094;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.container-form form .submit-btn:hover{
+    background: #3353df;
+}
+
+#observaciones {
+    border:1px solid #ccc;
+}
+
+#ver-precio-pagar {
+    margin-top: 30px;
+}
+  
+.ver-precio-pagar {
+    display: flex;
+    flex-direction: row;
+}
+
+.ver-precio-pagar span{
+    color: rgb(48, 219, 48);
+    margin-left: 5px;
+}
+  
+
+  

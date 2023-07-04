@@ -78,6 +78,9 @@ function mostrarCarrito(){
         let botonPagar = document.createElement("button");
         botonPagar.className = "botonPagar";
         botonPagar.textContent = "Pagar";
+        botonPagar.addEventListener("click", () => {
+        window.location.href = "../html/pagar.html";
+        });
         totalPagar.append(botonPagar);
         //agregar funcion a botonPagar despues
     } else {
@@ -87,20 +90,23 @@ function mostrarCarrito(){
     footerCarrito.append(totalPagar);
 }
 
-
-abrirCarrito.addEventListener("click", () => {
+function mostrarModalCarrito(){
     modalCarrito.showModal();
     mostrarCarrito();
-});
+}
+
+abrirCarrito.addEventListener("click", mostrarModalCarrito);
 
 (document.getElementById("salirCarrito")).addEventListener("click", cerrarCarrito);
 
-(document.getElementById("vaciarCarrito")).addEventListener("click", () => {
+(document.getElementById("vaciarCarrito")).addEventListener("click", vaciarCarrito);
+
+function vaciarCarrito() {
     carrito = []; // Vaciar el carrito asignando un array vacío
     saveLocal(); // Guardar el carrito vacío en el almacenamiento local
     mostrarCarrito(); // Actualizar la interfaz mostrando el carrito vacío
     actualizarContador();
-});
+}
 
 function cerrarCarrito(){
     modalCarrito.style.display = "none";
@@ -123,8 +129,12 @@ function saveLocal() {
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+function getPrecioTotal(){
+    return carrito.reduce((acc, p) => acc + p.precioAcum, 0);
+}
+
 function actualizarTotal() {
-    let suma = carrito.reduce((acc, p) => acc + p.precioAcum, 0);
+    let suma = getPrecioTotal();
     let totalPagar = document.querySelector(".totalPagar-carrito h3");
     totalPagar.textContent = `Total a pagar: $${suma}`;
   }
@@ -134,5 +144,9 @@ function actualizarTotal() {
     counter.innerText = carrito.length;
   }
 
+  
+
+  
+  
 
 
