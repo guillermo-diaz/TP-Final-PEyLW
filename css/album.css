@@ -14,12 +14,16 @@
     width: 200px;
     overflow: hidden;
     margin-bottom: 10px;
-    border: 1px solid transparent;
-    transition: border 0.3s; /* Transición suave de animación */
+    outline: 1.5px solid transparent;
+  
+    transition: outline 0.3s; /* Transición suave de animación */
 }
 
 .card-album:hover {
-    border: 1.5px solid rgb(119, 119, 247);
+    outline: 1.5px outset rgb(119, 119, 247);
+    backdrop-filter: blur(5px);
+ 
+
     
 }
 

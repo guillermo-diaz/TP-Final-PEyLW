@@ -39,6 +39,10 @@ function ordenarAlfabeticamenteReverso() {
   productosFiltro= productosFiltro.reverse();
 }
 
+function ordenarPorTipo(tipo){
+  productosFiltro = productosFiltro.filter(producto => producto.tipo === tipo);
+}
+
 const generoLinks = document.querySelectorAll('#genero-filtro .list-show .list-inside');
 
 
@@ -130,6 +134,48 @@ function resetBackgroundAlfabeto(){
     p.style.background = "white";
   })
 }
+
+const filtroTipo = document.querySelectorAll("#tipo-filtro .list-show .list-inside");
+
+filtroTipo.forEach((t) => {
+  let formato = (t.querySelector('a')).textContent;
+  let generoBoton = document.getElementById("genero-filtro");
+
+
+  if (formato === "Producto"){
+    t.addEventListener("click", () => {
+      
+      resetBackgroundTipo();
+      t.style.background = "#dfe0e0";
+      productosFiltro = productos.slice();
+      ordenarPorTipo("producto");
+      refreshProductos();
+      if (!generoBoton.classList.contains("list-show")) {
+        generoBoton.classList.toggle('list-show');
+      }
+    });
+  } 
+  if (formato === "Álbum"){
+    t.addEventListener("click", () => {
+      resetBackgroundTipo();
+      t.style.background = "#dfe0e0";
+      productosFiltro = productos.slice();
+      ordenarPorTipo("album");
+      refreshProductos();
+      generoBoton.classList.toggle('list-show');
+    });
+  }
+});
+
+function resetBackgroundTipo() {
+  filtroTipo.forEach((p) => {
+    p.style.background = "white";
+  })
+}
+
+
+
+
 
 
 
