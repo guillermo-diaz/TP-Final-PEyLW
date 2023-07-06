@@ -13,6 +13,14 @@
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
     width: 200px;
     overflow: hidden;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    transition: border 0.3s; /* Transición suave de animación */
+}
+
+.card-album:hover {
+    border: 1.5px solid rgb(119, 119, 247);
+    
 }
 
 .header-album img {
@@ -31,6 +39,10 @@
 
 .content-album h4{
     margin: 10px 0;
+}
+
+.content-album h4, .header-album img {
+    cursor: pointer;
 }
 
 

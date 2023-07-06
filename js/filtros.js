@@ -71,10 +71,7 @@ function resetBackgroundGenero(){
   })
 }
 
-function refreshProductos(){
-  seccionProductos.innerHTML = "";
-  mostrarProductos();
-}
+
 
 const filtroPrecio = document.querySelectorAll('#precio-filtro .list-show .list-inside');
 

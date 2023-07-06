@@ -19,6 +19,14 @@ function mostrarAlbumes(){
         let img = document.createElement("img");
         img.src = album.img;
 
+        nombre.addEventListener("click", () => {
+            window.location.href = "../html/detalleProducto.html?product=" + encodeURIComponent(JSON.stringify(album));
+        });
+
+        img.addEventListener("click", () => {
+            window.location.href = "../html/detalleProducto.html?product=" + encodeURIComponent(JSON.stringify(album));
+        });
+
         headerAlbum.append(img);
         contentAlbum.append(nombre);
         contentAlbum.append(anio);

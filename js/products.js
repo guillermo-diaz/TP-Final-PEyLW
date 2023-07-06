@@ -257,9 +257,6 @@ const productos = [
 const seccionProductos = document.getElementById("seccion-productos");
 let productosFiltro = productos.slice();
 
-
-
-
 function mostrarProductos(){
     productosFiltro.forEach((product) => {
         let content = document.createElement("div");
@@ -322,8 +319,48 @@ function mostrarProductos(){
         
     
     });
-
+    
 }
+let buscador = document.getElementById("buscador");
+
+function hayBusqueda(){
+    const urlParams = new URLSearchParams(window.location.search);
+    const busqueda = urlParams.get("product");
+    
+    if (busqueda !== null){
+        buscador.value = busqueda;
+        filtroBusqueda(busqueda);
+        refreshProductos();
+    }
+}
+
+function filtroBusqueda(busqueda) {
+    productosFiltro = productosFiltro.filter(producto => producto.nombre.toLowerCase().includes(busqueda.toLowerCase()));
+}
+
+
+
+
+
+function refreshProductos(){
+    seccionProductos.innerHTML = "";
+    mostrarProductos();
+}
+
+buscador.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      const busqueda = buscador.value.trim();
+      if (busqueda !== "") {
+        // Redirigir a productos.html solo si la URL actual no es productos.html
+        if (window.location.href.indexOf("productos.html") === -1) {
+            window.location.href = "../html/productos.html?product=" + busqueda;
+        } else {
+            filtroBusqueda(busqueda);
+            refreshProductos();
+        }
+      }
+    }
+  });
 
 
 
