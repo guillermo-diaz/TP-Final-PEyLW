@@ -144,6 +144,7 @@ function actualizarTotal() {
     counter.innerText = carrito.length;
   }
 
+  actualizarContador();
   
 
   

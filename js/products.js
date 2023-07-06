@@ -240,6 +240,17 @@ const productos = [
         anio: "1993",
         precio: 2500, 
         img: "https://upload.wikimedia.org/wikipedia/en/5/53/Wu-TangClanEntertheWu-Tangalbumcover.jpg"
+    },
+    {
+        id: "22",
+        tipo: "producto",
+        nombre: "Campera - No Love",
+        artista: "Eminem",
+        genero: ["Rap", "Hip Hop"],
+        info: "Campera con cierre y capucha Unisex de Eminem.",
+        anio: "2023",
+        precio: 2500,
+        img: "../img/camperaEminem2.png"
     }
 ];
 
@@ -263,9 +274,12 @@ function mostrarProductos(){
         let comprar = document.createElement("button");
         comprar.className = "comprar";
         comprar.textContent = "COMPRAR";
+        let containerImg = document.createElement("div");
+        containerImg.className = "container-product-img"
         let imagen = document.createElement("img");
         imagen.src = product.img;
         imagen.alt = product.nombre; 
+        containerImg.append(imagen)
         
         h3.addEventListener("click", () => {
             window.location.href = "../html/detalleProducto.html?product=" + encodeURIComponent(JSON.stringify(product));
@@ -281,7 +295,7 @@ function mostrarProductos(){
         divInfoProducto.append(pPrice);
         divInfoProducto.append(comprar);
     
-        content.append(imagen);
+        content.append(containerImg);
         content.append(divInfoProducto);
         seccionProductos.append(content);
     

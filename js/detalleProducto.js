@@ -12,9 +12,7 @@ function detalleProducto() {
     let contenedorDatos = document.getElementById("datos-product")
     let nombre = document.createElement("h2");
     nombre.textContent = product.nombre; 
-    let anio = document.createElement("span");
-    anio.textContent = "Año: "+product.anio;
-    anio.className = "anio-product"
+
     let precio = document.createElement("span");
     precio.className = "precio-product";
     precio.textContent = "$"+product.precio;
@@ -29,7 +27,6 @@ function detalleProducto() {
 
 
     contenedorDatos.append(nombre);
-    contenedorDatos.append(anio);
     contenedorDatos.append(precio);
     contenedorDatos.append(envios);
 

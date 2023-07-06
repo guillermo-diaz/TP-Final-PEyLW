@@ -1,0 +1,36 @@
+#container-albums {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 1em;
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+
+.card-album {
+    border-radius: 8px;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    width: 200px;
+    overflow: hidden;
+}
+
+.header-album img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.content-album {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 25px;
+    min-height: 60px;
+}
+
+.content-album h4{
+    margin: 10px 0;
+}
+
+
