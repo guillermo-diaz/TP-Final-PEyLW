@@ -20,76 +20,70 @@ a {
     text-decoration: none;
 }
 
-header {
-    display: flex;
-    flex-direction: column;
+.header {
+    display: grid;
+    grid-template-columns: 20% 40% 40%;
     align-items: center;
     width: 100%;
-    height: 10vw;
-    background-color: #FFFFFF;
-  }
-
-  .header_top {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: center;
-    height: 50%;
-
-  }
-
-  #barra_header {
+    height: 6vw;
     background-color: rgb(46, 93, 223);
-    width: 100%;
-    margin-top: auto;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   }
 
-  header nav {
-    display: flex;
-    justify-content: space-around;
-    
-  }
+
 
   ul {
     list-style: none;
   
   }
 
-  header nav ul li {
+  .header nav ul li {
     padding: 20px;
     display: inline-block;
   }
 
-  header nav ul li a{
+  .header nav ul li a{
     color: black;
     font-size: 17px;
     font-weight: 700;
-    transition: .3s ease;
+    transition: color .3s ease;
   }
 
-  header nav ul li a:hover{
+  .header nav ul li a:hover{
     color: #FFFFFF;
+  }
+  
+  .container-carrito {
+    padding: 5px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
   }
 
   #carrito {
     font-size: 20px;
-    margin-left: 15px;
-    border-radius: 50%;
     padding: 8px;
     color: rgb(24, 24, 24);
     font-weight: 200;
+    position: relative;
+    margin-left: 20px;
+    border-radius: 50%;
   }
 
-  #carrito {
 
-    position: relative;
+  #carrito i {
+    object-fit: cover;
   }
   
   #contador-productos {
     position: absolute;
-    top: -6px;
-    right: -2px;
+    top: -5px;
+    right: 0;
     background-color: red;
     color: white;
     border-radius: 50%;
@@ -102,52 +96,48 @@ header {
     align-items: center;
   }
   
-
   #carrito:active {
-    background-color: rgb(185, 185, 185);
-}
+    background-color: rgb(49, 104, 255);
+  }
 
-#icono {
-  margin-top: 5px;
-}
-
-#icono img {
-  
-  width: 100px;
-  height: 70px;
+.container-buscador-carrito {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
  
 
-
+.barra_header {
+  display: flex;
+  justify-content: flex-start;
+}
   /* Buscador */
 
   .container_barra {
     margin-top: 5px;
     margin-bottom: 5px;
     position: relative;
+
   }
 
   .buscador_input {
+    background: rgb(46, 93, 223);
     border-radius: 5px;
     width: 200px;
     padding: 0.8em;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #252525;
     outline: none;
     transition: border-color 0.2s, box-shadow 0.2s;
   }
 
-  .buscador_input:focus {
-    border-color: #0d7691;
-    box-shadow: 0 0 5px rgba(0, 160, 198, 0.5);
-
-  }
 
   .form-label {
     position: absolute;
     left: 0.9em;
     top: 0.9em;
-    color: #999;
+    color: #252525;
     transition: all 0.2s ease-out;
   }
 
@@ -156,26 +146,25 @@ header {
     top: -0.5em;
     left: 0.4em;
     font-size: 12px;
-    background-color: white;
+    background-color: rgb(46, 93, 223);
     padding: 0 5px;
   }
 
-  .buscador_input:focus + .form-label {
-    color: #00a0c6;
-  }
 
   .container_barra i {
     position: absolute;
     right: 0.5em;
     top: 35%;
-    color: #999;
+    color: #252525;
     
 }
+
+/*footer*/
 
 footer {
     width: 100vw;
     height: 110px;
-    margin-top: auto;
+    margin-top: 20px;
     padding: 1em 0;
     background-color:  rgb(46, 93, 223);
 }

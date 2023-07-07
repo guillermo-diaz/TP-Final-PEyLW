@@ -13,35 +13,41 @@
 
 <body>
     <header>
-        <div class="header_top">
-            
-            <div class="container_barra">
-                <input type="text" id="buscador" class="buscador_input" placeholder=" ">
-                <label for="buscador" class="form-label">Buscador</label>
-                <i class="fas fa-search"></i>
-            </div>
-            <a id="carrito">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="contador-productos">0</span>
-            </a>
-        </div>
-        <div id="barra_header">
+        <div class="header">
+          <div logo>
+    
+          </div>
+          <div id="barra_header">
             <nav>
-                <ul>
-                    <li>
-                        <a href="index.html">INICIO</a>
-                    </li>
-                    <li>
-                        <a href="album.html" >ÁLBUMES</a>
-                    </li>
-                    <li>
-                        <a href="productos.html" >PRODUCTOS</a>
-                    </li>
-                </ul>
+              <ul>
+                <li>
+                  <a href="index.html" >INICIO</a>
+                </li>
+                <li>
+                  <a href="album.html">ÁLBUMES</a>
+                </li>
+                <li>
+                  <a href="productos.html">PRODUCTOS</a>
+                </li>
+              </ul>
             </nav>
+          </div>
+          <div class="container-buscador-carrito">
+            <div class="container_barra">
+              <input type="text" id="buscador" class="buscador_input" placeholder=" ">
+              <label for="buscador" class="form-label">Buscador</label>
+              <i class="fas fa-search"></i>
+            </div>
+            <div class="container-carrito">
+              <a id="carrito">
+                <i class="fas fa-shopping-cart">
+                  <span id="contador-productos">0</span>
+                </i>
+              </a>
+            </div>
+          </div>
         </div>
-    </header>
-
+      </header>
     <section>
         <div class="container-form">
 
