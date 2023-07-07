@@ -251,8 +251,53 @@ const productos = [
         anio: "2023",
         precio: 2500,
         img: "../img/camperaEminem2.png"
+    },
+    {
+        id: "23",
+        tipo: "producto",
+        nombre: "Gorro Revenge",
+        artista: "XXXTentacion",
+        genero: [],
+        info: "Piluso Gorro Revenge, de Xxxtentacion",
+        anio: "2023",
+        precio: 3000,
+        img: "../img/gorroTent.png"
+    },
+    {
+        id: "24",
+        tipo: "producto",
+        nombre: "Remera Mujer Kendrick Lamar",
+        artista: "Kendrick Lamar",
+        genero: [],
+        info: "Remera Mujer Kendrick Lamar Rap Hip Hop Rh11 Dtg Premium",
+        anio: "2023",
+        precio: 5000,
+        img: "../img/remeraKendrick.png"
+    },
+    {
+        id: "25",
+        tipo: "producto",
+        nombre: "La Geometria De Una Flor",
+        artista: "Gustado Cerati",
+        genero: [],
+        info: "Se pueden pensar los últimos discos de Soda Stereo y los primeros de la etapa solista de Gustavo Cerati sin el aporte de la música electrónica? ¿Acaso estos no son hijos de una comunión entre el rock que siempre practicó y la contribución de este nuevo género en el que cada vez más se sumergiría? Plan V, Ocio, Roken y la placa Colores santos, que Cerati grabó en 1992 junto a Daniel Melero, sin olvidar las bandas sonoras que compuso para las películas Bien y Sólo por hoy son los discos y proyectos a los que se hace referencia a lo largo de este libro. Álbumes, EP y grabaciones muchas de ellas descatalogadas o perdidas que significaron la puerta de entrada del artista a la escena electrónica que se estaba desarrollando en esos tiempos y que, por su importancia, se convirtieron en la médula espinal de algunas de las piezas de su discografía. Discos que todavía se nos presentan contemporáneos y, muchas veces, hasta se nos antojan de vanguardia.",
+        anio: "2023",
+        precio: 7000,
+        img: "../img/libroCerati.png"
+    },
+    {
+        id: "26",
+        tipo: "producto",
+        nombre: "Cuadro Rock - Daft Punk - Pop Art",
+        artista: "Daft Punk",
+        genero: [],
+        info: "EL BURRO CUADROS te presenta este diseño para tu cuadro decorativo, un producto ideal para realizar un regalo personalizado o una compra personal y decorar el ambiente que quieras. Viene impreso y enmarcado con vidrio, fabricado con materiales de primera calidad, listo para colgar !!!",
+        anio: "2023",
+        precio: 7000,
+        img: "../img/cuadroDaft.png"
     }
 ];
+
 
 const seccionProductos = document.getElementById("seccion-productos");
 let productosFiltro = productos.slice();

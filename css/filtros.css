@@ -69,6 +69,7 @@
     border-left: 0.8px solid #636877;
     list-style: none;
     transition: height .4s;
+    transition: display .4s;
     height: 0;
   }
   

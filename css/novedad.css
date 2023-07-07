@@ -3,6 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
 }
 
 .section-slider {
@@ -100,3 +102,32 @@
 .name-product:hover, .image:hover{
     cursor: pointer;
 }
+
+.novedades-portada  {
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.novedades-portada img{
+    object-fit: cover;
+    width: 1000px;
+    outline: 2px solid rgb(29, 28, 28);
+}
+
+.novedades-title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.novedades-title h2{
+    font-size: 30px;
+    text-decoration: underline;
+}   
+
+

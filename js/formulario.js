@@ -13,8 +13,6 @@ function mostrarPrecio(){
 
 mostrarPrecio();
 
-
-
 document.getElementById("submit-comprar").addEventListener("click", validar);
 
 function validar(){
@@ -22,14 +20,22 @@ function validar(){
     console.log("hola")
     v1 = verificarDatosPersonales();
     v2 = verificarDatosPago();
-    console.log(v1);
-    console.log(v2);
-
+    
     if (v1 && v2){
         vaciarCarrito();
-        alert("Pago Realizado");
+        Swal.fire({
+            title: 'Pago Realizado!',
+            text: 'Puede seguir comprando',
+            icon: 'success',
+          });
+        
+        
     }
 }
+
+
+
+
 
 function verificarDatosPersonales(){
     let v1, v2, v3, v4, v5, v6, elemDireccion;
