@@ -295,6 +295,17 @@ const productos = [
         anio: "2023",
         precio: 7000,
         img: "../img/cuadroDaft.png"
+    }, 
+    {
+        id: "27",
+        tipo: "album",
+        nombre: "Bad Vibes Forever",
+        artista: "XXXTentacion",
+        genero: ["Rock Alternativo", "Hip Hop", "R&B", "Emo"],
+        info: "Bad Vibes Forever es el cuarto y último álbum de estudio del rapero estadounidense XXXTentacion. Fue lanzado el 6 de diciembre de 2019 a través de Bad Vibes Forever y Empire. Es su segundo álbum en solitario póstumo y su último álbum después de su muerte el 18 de junio de 2018. El álbum fue lanzado el 6 de diciembre de 2019 y presenta apariciones especiales de Lil Wayne, Blink-182, Tory Lanez, Stefflon Don, Mavado, Ky-Mani Marley, Rick Ross, Vybz Kartel y otros",
+        anio: "2019",
+        precio: 10000,
+        img: "https://upload.wikimedia.org/wikipedia/en/5/56/Bad_vibes_forever_xxxtentacion.jpg"
     }
 ];
 
