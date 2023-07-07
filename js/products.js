@@ -306,6 +306,17 @@ const productos = [
         anio: "2019",
         precio: 10000,
         img: "https://upload.wikimedia.org/wikipedia/en/5/56/Bad_vibes_forever_xxxtentacion.jpg"
+    }, 
+    {
+        id: "28",
+        tipo: "album",
+        nombre: "Legends Never Die",
+        artista: "Juice Wrld",
+        genero: ["Pop", "Hip Hop", "R&B", "Emo Trap", "Pop Rap", "Rock Alternativo", "Pop Punk"],
+        info: "Legends Never Die —en español: Leyendas nunca mueren— es el tercer álbum de estudio del rapero estadounidense Juice Wrld y el primer álbum póstumo después de su muerte por sobredosis de drogas el 8 de diciembre de 2019.1​ Fue lanzado el 10 de julio de 2020 a través de Grade A Productions y distribuido por Interscope Records. El 4 de mayo de 2020, el álbum fue anunciado originalmente por la novia de Juice Wrld, Ally Lotti, bajo el título de The Outsiders. Sin embargo, el título fue cambiado días después.2​",
+        anio: "2019",
+        precio: 8000,
+        img: "https://i.discogs.com/O7_-5er5eB0InrMFdHS2Ew6aBMAvnKAMG4f-7uvVrPA/rs:fit/g:sm/q:90/h:599/w:600/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTE2MTU1/NDY3LTE2MDkxOTEz/NTUtMTk0OC5qcGVn.jpeg"
     }
 ];
 
